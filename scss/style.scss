@@ -1,0 +1,464 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+// Обнуляющий стиль
+
+
+
+// ===========================
+
+
+// Переменные - начало
+
+$bg1Color: #eaeaea;
+
+
+// Переменные - конец
+
+
+// ===========================
+
+
+// Модификаторы - начало
+
+
+
+// Модификаторы - конец
+
+
+// ===========================
+
+ 
+// Общие стили - начало
+
+body {
+
+	background: $bg1Color ;
+
+	font-family: Montserrat, Roboto, Arial;
+}
+
+.wrapper {
+
+	padding: 0 15px;
+	margin: 0 auto;
+
+	max-width: 1170px;
+
+	position: relative;
+
+}
+
+// Общие стили - конец
+
+
+// ===========================
+
+
+// Хедер - начало
+
+.nav {
+
+	padding: 36px 0 40px 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.header {
+
+	ul {
+
+		display: flex;
+
+		li {
+
+			position: relative;
+
+			padding-left: 23px;
+			margin-left: 23px;
+
+			a {
+
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #494949;
+
+			}
+
+		}
+
+		li:before { 
+
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			width: 2px;
+			height: 100%;
+			background: #494949;
+
+		}
+
+		li:first-child {
+
+			padding-left: 0px;
+			margin-left: 0px;
+
+		}
+
+		li:first-child:before {
+
+			display: none;
+
+		}
+
+		@media (max-width: 690px) {
+
+			flex-wrap: wrap;
+
+				li {
+
+					padding: 0px 20px 10px 20px;
+					margin: 0px;
+
+					&:first-child {
+
+						padding: 0px 20px 10px 20px;
+						margin: 0px;
+
+					}
+
+				}
+
+				li::before { 
+
+					display: none;
+
+			}
+
+		}
+
+
+	}
+
+}
+
+// Хедер - конец
+
+
+// ===========================
+
+
+// Баннер - начало
+
+.banner {
+
+	@media (max-width: 1050px) {
+
+			text-align: center;
+
+		}
+
+	background: url(../img/Banner.png);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+
+	padding: 260px 0px 285px 0px;
+
+	color: #fff;
+
+	img {
+
+		position: absolute;
+		right: 0;
+		top: -220px;
+
+		@media (max-width: 1050px) {
+
+			display: none;
+
+		}
+
+	}
+
+	h1 {
+
+		font-size: 50px;
+
+		padding-bottom: 26px;
+
+	}
+
+	p {
+
+		font-family: Roboto, sans-serif;
+		font-size: 25px;
+		line-height: 1.2;
+		text-align: justify;
+		color: #fff;
+
+		max-width: 570px;
+		padding-bottom: 44px;
+
+		@media (max-width: 1050px) {
+
+			text-align: center;
+			margin: 0 auto;
+
+		}
+
+	}
+
+	a {
+
+		color: #fff;
+		border: solid 2px #fff;
+		padding: 18px 34px 18px 31px;
+		font-size: 20px;
+		font-weight: 700;
+
+		max-width: 190px;
+
+	}
+
+
+}
+
+// Баннер - конец
+
+
+// ===========================
+
+//Второй блок - начало
+
+	// width: 469px;
+	// height: 93px;
+
+	// margin: 0 auto;
+	// padding-top: 31px;
+
+	// margin-top: 129px;
+	// margin-bottom: 95px;
+
+	// text-align: center;
+
+	// background: url(../img/ico/createButton.svg);
+	// background-position: center center;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+
+.button {
+
+	a {
+
+	background: url(../img/ico/createButton.svg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	display: block;
+
+	max-width: 469px;
+	height: 93px;
+
+	margin: 0 auto;
+	padding-top: 33px;
+
+	margin-top: 129px;
+	margin-bottom: 95px;
+
+	text-align: center;
+
+	font-family: Montserrat;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 0.8;
+	color: #fff;
+
+	}
+
+}
+
+.page {
+
+	padding-top: 50px;
+
+
+	ul {
+
+		justify-content: center;
+		padding-bottom: 42px;
+
+	}
+
+	h2 {
+
+		position: relative;
+
+		display: inline-block;
+		font-size: 45px;
+		color: #282828;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-align: center;
+
+		margin: 0 auto;
+
+		padding: 0px 127px 21px 127px;
+
+		@media (max-width: 590px) {
+
+			padding: 0px 10%; 
+
+		}
+
+
+		&:after, &:before {
+
+		content: '';
+		position: absolute;
+		background: url(../img/ico/textShape.svg);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 102px;
+		height: 28px;
+
+		top: 0;
+
+		@media (max-width: 450px) {
+
+			display: none;
+
+		}
+
+		}
+
+
+		&:after {
+
+			right: 0;
+
+		}
+
+		&:before {
+
+			left: 0;
+
+		}
+
+
+	}
+
+.text {
+
+		text-align: center;
+
+		p { 
+
+		overflow-wrap: break-word;
+		font-family: Roboto;
+		font-size: 20px;
+		line-height: 1.5;
+		color: #959595;
+
+		padding-bottom: 42px;
+
+	}
+
+}
+
+}
+
+
+.flexList {
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+.flexListItem {
+
+	h3 {
+
+	  font-family: Roboto;
+	  font-size: 120px;
+	  font-weight: 900;
+	  text-align: left;
+	  color: #282828;
+
+	  padding-right: 10px;
+
+	}
+
+	h4 {
+
+	  font-size: 45px;
+	  font-weight: 700;
+	  text-align: left;
+	  color: #282828;
+
+	}
+
+	p {
+
+		max-width: 257px;
+
+		font-family: Roboto;
+		font-size: 18px;
+		line-height: 1.33;
+		text-align: left;
+		color: #282828;
+
+	}
+
+	img {
+
+		max-width: 182px;
+
+	}
+
+}
+.col1 {
+
+	display: flex;
+
+}
+.col2 {}
+
+//Второй блок - конец
+
+
+// ===========================
+
+
+//Футер - начало
+
+.footer {
+
+	height: 106px;
+	background: url(../img/footer.png);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	p {
+		padding-top: 43px;
+
+		font-family: Roboto;
+		font-size: 20px;
+		text-align: center;
+		color: #eaeaea;
+
+	}
+
+}
+
+//Футер - конец
